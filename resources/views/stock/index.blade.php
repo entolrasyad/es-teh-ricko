@@ -24,7 +24,7 @@
         <td class="text-end">
           <button
             type="button"
-            class="btn btn-lg btn-primary"
+            class="btn btn-green btn-lg btn-success"
             data-bs-toggle="modal"
             data-bs-target="#editStockModal"
             data-id="{{ $menu->id }}"
@@ -83,7 +83,7 @@
           class="btn btn-secondary"
           data-bs-dismiss="modal"
         >Cancel</button>
-        <button type="submit" class="btn btn-primary">Confirm</button>
+        <button type="submit" class="btn btn-green btn-success">Confirm</button>
       </div>
     </form>
   </div>

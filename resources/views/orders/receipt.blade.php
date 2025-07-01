@@ -16,7 +16,7 @@
       <table class="table table-borderless table-sm mt-1" style="--bs-table-bg: none">
         <thead>
           <tr>
-            <th>Pesanan</th>
+            <th>Es Teh</th>
             <th>Uk</th>
             <th class="text-center">Qty</th>
             <th class="text-end">Harga</th>
@@ -25,7 +25,7 @@
         <tbody>
           @foreach($order->transactions as $txn)
             <tr>
-              <td>{{ $txn->menu->name }}</td>
+              <td>{{ str_replace('ES TEH', '', $txn->menu->name) }}</td>
               <td>{{ $txn->size }}</td>
               <td class="text-center">{{ $txn->quantity }}</td>
               <td class="text-end">
@@ -35,6 +35,9 @@
           @endforeach
         </tbody>
         <tfoot>
+          <tr>
+            <th colspan="4" class="text-end">_______</th>
+          </tr>
           <tr>
             <th colspan="3" class="text-start">Total:</th>
             <th class="text-end">

@@ -24,6 +24,6 @@ class StockController extends Controller
 
         return redirect()
             ->route('stock.index')
-            ->with('success', "Stock for “{$menu->name}” changed from {$old} to {$menu->stock}.");
+            ->with('success', "Stock " . strtolower($menu->name) . " telah diubah dari {$old} ke {$menu->stock}");
     }
 }

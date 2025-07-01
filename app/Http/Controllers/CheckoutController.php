@@ -26,7 +26,7 @@ class CheckoutController extends Controller
         
         $order = DB::transaction(function() use ($items, $paymentMethod, $grandTotal) {
             $order = Order::create([
-                'order_number'   => 'ORD' . now()->format('YmdHisv') . Str::upper(Str::random(6)),
+                'order_number'   => now()->format('YmdHisv') . Str::upper(Str::random(3)),
                 'payment_method' => $paymentMethod,
                 'total_amount'   => $grandTotal,
             ]);
