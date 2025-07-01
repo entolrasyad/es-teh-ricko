@@ -1,0 +1,69 @@
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3A7D44;
+}
+
+.btn-green {
+    background-color: #3A7D44;
+}
+.btn-orange {
+    background-color: #DF6D14;
+    color: #FFF;
+}
+.btn-orange-outline {
+    color: #DF6D14;
+    border-color: #DF6D14;
+}
+
+.es-bg {
+    background-color: #FFF;
+}
+
+.es-bg-navbar {
+    background-color: #FFF;
+    font-weight: 700;
+}
+
+.es-text {
+    color: #3A7D44;
+    font-size: 15pt;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.login-bg {
+    background-color: #3A7D44;
+}
+
+.es-menu-name {
+    color: #3A7D44;
+}
+
+.es-bg-desc {
+    background-color: #FDFAF6;
+}
+
+.img-light {
+    filter: opacity(0.5) drop-shadow(0 0 0 green);
+}
+
+.img-light-logo {
+     filter: brightness(0) invert(1);
+}
+
+.gradient-custom {
+/* fallback for old browsers */
+background: rgb(157, 192, 139);
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, #F8F5E9, rgb(157, 192, 139));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, #F8F5E9, rgb(157, 192, 139))
+}
