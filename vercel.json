@@ -7,7 +7,6 @@
       "runtime": "vercel-php@0.7.1"
     }
   },
-    "buildCommand":    "php artisan config:cache && php artisan route:cache && php artisan view:cache",
   "routes": [
     {
       "src": "/build/(.*)",      
