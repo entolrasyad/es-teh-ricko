@@ -62,7 +62,7 @@
             <p class="card-text">{{ $menu->description }}</p>
           </div>
           
-          <div class="card-footer text-center h5 es-bg-desc" style="margin-bottom: 0">
+          <div class="card-footer text-center h6 es-bg-desc" style="margin-bottom: 0">
             {{-- MEDIUM --}}
             <div class="row align-items-center mb-3">
               <div class="col">Rp {{ number_format($menu->price_medium,0,',','.') }}</div>
