@@ -25,7 +25,7 @@
 
             <div class="mb-md-5 mt-md-4">
             <img class="img-light-logo" src="{{ asset('images/logo.png') }}" alt="MyApp Logo" height="150" >
-              <h2 class="mb-5 text-uppercase" style="font-weight: 700;font-size: 22px;">{{ config('app.name','MyApp') }}</h2>
+              <h2 class="mb-5 text-uppercase" style="font-weight: 700;font-size: 20px;">{{ config('app.name','MyApp') }}</h2>
 
             <form method="POST" action="{{ route('login') }}">
                 @csrf
