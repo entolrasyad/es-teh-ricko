@@ -2,11 +2,11 @@
 
 @section('content')
 @if(session('success'))
-  <div class="alert alert-success">
+  <div class="alert alert-success text-center">
     {{ session('success') }}
   </div>
 @endif
-<div class="container my-5">
+<div class="container my-2">
   <div class="card es-bg-desc">
     <div class="card-header d-flex flex-column align-items-center es-bg-desc">
       <img class="img-light" src="{{ asset('images/logo.png') }}" alt="MyApp Logo" height="100">

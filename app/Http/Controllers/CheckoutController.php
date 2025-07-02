@@ -49,6 +49,6 @@ class CheckoutController extends Controller
 
         return redirect()
             ->route('orders.receipt', $order->id)
-            ->with('success', 'Order Berhasil Dibuat!');
+            ->with('success', 'TERIMA KASIH!');
     }
 }
