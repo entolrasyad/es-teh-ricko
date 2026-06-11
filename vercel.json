@@ -17,6 +17,7 @@
     { "src": "/images/(.*)", "dest": "/images/$1" },
     { "src": "/favicon\\.ico", "dest": "/favicon.ico" },
     { "src": "/robots\\.txt", "dest": "/robots.txt" },
+    { "src": "/api/migrate\\.php(.*)", "dest": "/api/migrate.php" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "public": true,
