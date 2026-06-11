@@ -19,9 +19,14 @@ try {
 
     $app = require_once __DIR__ . '/../bootstrap/app.php';
     $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
+    $kernel->bootstrap();
 
     // Step 1: test DB connection
     if (isset($_GET['testdb'])) {
+        echo "Config DB host: " . config('database.connections.mysql.host') . "\n";
+        echo "Config DB port: " . config('database.connections.mysql.port') . "\n";
+        echo "Config DB name: " . config('database.connections.mysql.database') . "\n";
+        echo "Config DB user: " . config('database.connections.mysql.username') . "\n";
         $pdo = $app->make('db')->connection()->getPdo();
         echo "DB connection OK\n";
         echo "Driver: " . $pdo->getAttribute(PDO::ATTR_DRIVER_NAME) . "\n";
