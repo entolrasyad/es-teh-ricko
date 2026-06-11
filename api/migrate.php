@@ -27,6 +27,20 @@ try {
         echo "Config DB port: " . config('database.connections.mysql.port') . "\n";
         echo "Config DB name: " . config('database.connections.mysql.database') . "\n";
         echo "Config DB user: " . config('database.connections.mysql.username') . "\n";
+        echo "SSL_CA env: " . (getenv('MYSQL_ATTR_SSL_CA') ?: '(empty)') . "\n";
+        echo "PDO options: " . json_encode(config('database.connections.mysql.options')) . "\n\n";
+
+        echo "Available CA paths:\n";
+        foreach ([
+            '/etc/pki/tls/certs/ca-bundle.crt',
+            '/etc/ssl/certs/ca-certificates.crt',
+            '/etc/ssl/cert.pem',
+            '/etc/ssl/certs/ca-bundle.crt',
+        ] as $p) {
+            echo "  " . ($f = file_exists($p) ? 'EXISTS' : 'missing') . "  $p\n";
+        }
+        echo "\n";
+
         $pdo = $app->make('db')->connection()->getPdo();
         echo "DB connection OK\n";
         echo "Driver: " . $pdo->getAttribute(PDO::ATTR_DRIVER_NAME) . "\n";
